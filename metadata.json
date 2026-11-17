@@ -1,0 +1,6 @@
+{
+  "name": "ReelFind",
+  "description": "ReelFind 私人放映厅 — 影视聚合搜索、豆瓣片单发现与沉浸式在线播放界面重设计。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

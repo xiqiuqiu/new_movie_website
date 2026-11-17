@@ -1,0 +1,60 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: "Cormorant Garamond", "Noto Serif SC", Georgia, serif;
+    --font-sans: "Plus Jakarta Sans", "Noto Sans SC", system-ui, -apple-system, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-tabular {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle cinema film grain for archival poster frames */
+.cinema-grain {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 0);
+  background-size: 16px 16px;
+}
+
+/* TV 10-foot UI focus emphasis */
+.tv-mode button:focus-visible,
+.tv-mode a:focus-visible,
+.tv-mode input:focus-visible,
+.tv-mode select:focus-visible,
+.tv-mode textarea:focus-visible {
+  outline: 3px solid #E5A93C;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px rgba(229, 169, 60, 0.22);
+}
+
+/* Clean custom horizontal scrollbar for media rails */
+.rail-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.rail-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.rail-scroll::-webkit-scrollbar-thumb {
+  background: rgba(143, 150, 163, 0.25);
+  border-radius: 9999px;
+}
+.rail-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(229, 169, 60, 0.55);
+}
